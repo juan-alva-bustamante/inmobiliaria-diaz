@@ -2,78 +2,28 @@ import React from 'react';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
-
-  var settings = {
-    autoplay: false,
-    infinite: true,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
-
   return (
     <div>
-      <header className="navigation fixed-top">
-        <div className="container">
-          {/* main nav */}
-          <nav className="navbar navbar-expand-lg navbar-light">
-            {/* logo */}
-            <a className="navbar-brand logo" href="index.html">
-              <img className="logo-default" src="images/logo.png" alt="logo" />
-              <img className="logo-white" src="images/logo-white.png" alt="logo" />
-            </a>
-            {/* /logo */}
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon" />
-            </button>
-            <div className="collapse navbar-collapse" id="navigation">
-              <ul className="navbar-nav ml-auto text-center">
-                <li className="nav-item dropdown active">
-                  <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Homepage
-                  </a>
-                  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a className="dropdown-item" href="index.html">Homepage</a>
-                    <a className="dropdown-item" href="onepage-slider.html">Onepage</a>
-                    <a className="dropdown-item" href="onepage-text.html">Onepage 2</a>
-                  </div>
-                </li>
-                <li className="nav-item ">
-                  <a className="nav-link" href="about.html">About Us</a>
-                </li>
-                <li className="nav-item ">
-                  <a className="nav-link" href="service.html">Services</a>
-                </li>
-                <li className="nav-item ">
-                  <a className="nav-link" href="portfolio.html">Portfolio</a>
-                </li>
-                <li className="nav-item ">
-                  <a className="nav-link" href="team.html">Team</a>
-                </li>
-                <li className="nav-item ">
-                  <a className="nav-link" href="pricing.html">Pricing</a>
-                </li>
-                <li className="nav-item ">
-                  <a className="nav-link" href="contact.html">Contact</a>
-                </li>
-                <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Pages
-                  </a>
-                  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a className="dropdown-item" href="404.html">404 Page</a>
-                    <a className="dropdown-item" href="blog.html">Blog Page</a>
-                    <a className="dropdown-item" href="single-post.html">Blog Single Page</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </nav>
-          {/* /main nav */}
+      <div style={{paddingBottom: '4rem'}}>
+        {/* component */}
+        <div className={`w-screen flex flex-row items-center p-1 justify-between shadow-xs fixed ${styles.navbar}`}>
+          <div className="flex justify-center items-center cursor-pointer">
+            <img
+              className="w-16 ml-8 rounded-2xl cursor-pointer"
+              src="https://scontent.fmex12-1.fna.fbcdn.net/v/t39.30808-6/241818217_101916745582049_1941194979437688303_n.png?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeG1HzdA3ITFn9xBil09pJWk4liCMs97xAPiWIIyz3vEA_KLBB23rAjkiQgn0Bldh-1rCoLp35-WsfwLLeljBDWQ&_nc_ohc=u6pK6UC2hIEAX97NQN0&_nc_ht=scontent.fmex12-1.fna&oh=6e84cce4c785c9246c178a64d9ef605d&oe=614DAE7F"
+              alt=""/>
+            <div className={`ml-2 text-lg text-gray-700 hidden md:flex ${styles.textLogo}`}>Inmobiliaria Diaz & Castillo</div>
+          </div>
+          <div className="flex flex-row-reverse mr-4 ml-4 md:hidden">
+            <i className="fas fa-bars"/>
+          </div>
+          <div className={`flex flex-row-reverse mr-8 hidden md:flex ${styles.linksContainer}`}>
+            <p>Nosotros</p>
+            <p>Ofertas</p>
+            <p>Contacto</p>
+          </div>
         </div>
-      </header>
-
+      </div>
     </div>
   );
 }

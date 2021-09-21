@@ -1,0 +1,72 @@
+.homeContainer {
+  overflow: hidden;
+}
+
+.sliderItem {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fca8a8;
+  background-image: url('https://www.nocnok.com/hubfs/iStock-1093521318.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .itemsContainer {
+    text-align: center;
+    background-color: transparent;
+
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > div {
+      width: 50%;
+      height: auto;
+
+      & > h1 {
+        font-size: var(--font-extra-big);
+        font-weight: 600;
+        letter-spacing: .1rem;
+        margin-top: 1rem;
+      }
+
+      & > p {
+        margin-top: 1rem;
+        font-size: var(--font-normal);
+        font-weight: 600;
+        letter-spacing: .1rem;
+      }
+
+      & > button {
+        font-size: var(--font-normal);
+        font-weight: 600;
+        letter-spacing: .1rem;
+        margin-top: 1rem;
+        background-color: var(--color-green);
+        border-radius: 2rem;
+        padding: 1rem;
+        box-shadow: .5rem .5rem 1rem #5b5b5b;
+        transition: all ease-in-out 0.3s;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+          transition: all ease-in-out 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.sliderItem2 {
+  @extend .sliderItem;
+  background-image: url('https://res.cloudinary.com/db4l1alkm/images/f_auto,q_auto/v1594946102/main/main.jpg');
+}
+
+.container {
+  background-color: red;
+  height: 100vh;
+  width: 100vw;
+}
